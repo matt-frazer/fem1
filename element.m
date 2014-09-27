@@ -9,6 +9,8 @@ classdef element
        node2_ %id
        nodeMap_
        kEff_
+       stressMag_
+       stressDir_ %Tension, Compression
     end
     
     methods
@@ -56,6 +58,46 @@ classdef element
            eOut = e;
         end
         
+        function stress = localStresses(e, gDispVect)
+            
+            dispVect = zeros([4,1]);
+            dispVect(1:2,1) = gDispVect(e.node1_*2-1:e.node1_*2);
+            dispVect(3:4,1) = gDispVect(e.node2_*2-1:e.node2_*2);
+            
+            a = cos(angle(e));
+            b = sin(angle(e));
+            
+            T = [a      b       0       0;
+                 -b     a       0       0;
+                 0      0       a       b;
+                 0      0       -b      a;];
+             
+            stress = (1/e.area_).*(T*e.kEff_*dispVect);
+            
+        end
+        
+        function eOut = postProcess(e,gDispVect)
+           
+            stress = localStresses(e, gDispVect);
+            e.stressMag_ = abs(stress(1));
+            
+            if (stress(1) > 0)
+                e.stressDir_ = 'Compression';
+            elseif (stress(1) < 0)
+                e.stressDir_ = 'Tension';
+            else 
+                e.stressDir_ = 'No Stress';
+            end
+            
+            eOut = e;
+            
+        end
+        
+        function disp(e)
+            
+            fprintf('%d         %f          %s\n', e.elementId_, e.stressMag_, e.stressDir_);
+            
+        end
     end
    
 end
