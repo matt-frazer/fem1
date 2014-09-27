@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+
+<Project>
+
+	<Geometry>
+		<Node>
+			<GlobalId>1</GlobalId>
+			<CordX>0</CordX>
+			<CordY>0</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>Fixed</Support>
+		</Node>
+		
+		<Node>
+			<GlobalId>2</GlobalId>
+			<CordX>0.5</CordX>
+			<CordY>0</CordY>
+			<ForceRef>3</ForceRef>
+			<Support>Free</Support>
+		</Node>
+		
+		<Node>
+			<GlobalId>3</GlobalId>
+			<CordX>1</CordX>
+			<CordY>0</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>XRoller</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>4</GlobalId>
+			<CordX>0.5</CordX>
+			<CordY>0.866</CordY>
+			<ForceRef>2</ForceRef>
+			<Support>Free</Support>
+		</Node>
+	</Geometry>
+
+	<Forces>
+
+		<Force>
+			<ForceId>2</ForceId>
+			<ForceMag>480</ForceMag>
+			<ForceDir>0</ForceDir>
+		</Force>
+		
+		<Force>
+			<ForceId>3</ForceId>
+			<ForceMag>460</ForceMag>
+			<ForceDir>4.1888</ForceDir>
+		</Force>
+		
+	</Forces>
+	
+	<Elements>
+		
+		<Element>
+			<ElementId>1</ElementId>
+			<LocalNode1>1</LocalNode1>
+			<LocalNode2>2</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+		
+		<Element>
+			<ElementId>2</ElementId>
+			<LocalNode1>2</LocalNode1>
+			<LocalNode2>3</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+		
+		<Element>
+			<ElementId>3</ElementId>
+			<LocalNode1>1</LocalNode1>
+			<LocalNode2>4</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>4</ElementId>
+			<LocalNode1>2</LocalNode1>
+			<LocalNode2>4</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>5</ElementId>
+			<LocalNode1>3</LocalNode1>
+			<LocalNode2>4</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+	</Elements>
+	
+</Project>

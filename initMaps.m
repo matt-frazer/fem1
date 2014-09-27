@@ -2,20 +2,21 @@ nodeMap = containers.Map('KeyType', 'int32', 'ValueType', 'any');
 forceMap = containers.Map('KeyType', 'int32', 'ValueType', 'any');
 elementMap = containers.Map('KeyType', 'int32', 'ValueType', 'any');
 
-fileName = 'test.xml';
+fileName = 'toast2.xml';
 
 %Node Data
 globalIds = readXML('GlobalId',fileName);
 cordX = readXML('CordX',fileName);
 cordY = readXML('CordY',fileName);
 forceRef = readXML('ForceRef',fileName);
+support = readXML('Support', fileName);
 
 numNodes = numel(globalIds);
 
 %Construct Nodes
 for n = 1:numNodes
     nodeMap(str2double(globalIds{n})) =  node(str2double(globalIds{n}), str2double(cordX{n}), str2double(cordY{n}),...
-        forceMap,str2double(forceRef{n}),elementMap,eList);
+        forceMap,str2double(forceRef{n}),elementMap,eList, support{n});
 end
 
 %Force Data

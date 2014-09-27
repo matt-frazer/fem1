@@ -16,6 +16,14 @@ classdef appForce
         function disp(f)
            fprintf('Force %d magnitude is %f\n', f.forceId_, f.mag_);
         end
+               
+        function r = xMag(f)
+            r = f.mag_*cos(f.dir_);
+        end
+        
+        function r = yMag(f)
+            r = f.mag_*sin(f.dir_);
+        end
+        
     end
-    
 end

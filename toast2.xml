@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+
+<Project>
+
+	<Geometry>
+		<Node>
+			<GlobalId>1</GlobalId>
+			<CordX>0</CordX>
+			<CordY>0</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>XRoller</Support>
+		</Node>
+		
+		<Node>
+			<GlobalId>2</GlobalId>
+			<CordX>1</CordX>
+			<CordY>0</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>Fixed</Support>
+		</Node>
+		
+		<Node>
+			<GlobalId>3</GlobalId>
+			<CordX>2</CordX>
+			<CordY>0</CordY>
+			<ForceRef>3</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>4</GlobalId>
+			<CordX>3</CordX>
+			<CordY>0</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>XRoller</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>5</GlobalId>
+			<CordX>4</CordX>
+			<CordY>0</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>Fixed</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>6</GlobalId>
+			<CordX>0.5</CordX>
+			<CordY>0.866</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>7</GlobalId>
+			<CordX>1.5</CordX>
+			<CordY>0.866</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>8</GlobalId>
+			<CordX>2.5</CordX>
+			<CordY>0.866</CordY>
+			<ForceRef>8</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>9</GlobalId>
+			<CordX>3.5</CordX>
+			<CordY>0.866</CordY>
+			<ForceRef>-1</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>10</GlobalId>
+			<CordX>1</CordX>
+			<CordY>1.733</CordY>
+			<ForceRef>10</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+		<Node>
+			<GlobalId>11</GlobalId>
+			<CordX>3</CordX>
+			<CordY>1.733</CordY>
+			<ForceRef>11</ForceRef>
+			<Support>Free</Support>
+		</Node>
+
+	</Geometry>
+
+	<Forces>
+
+		<Force>
+			<ForceId>3</ForceId>
+			<ForceMag>200</ForceMag>
+			<ForceDir>3.66519</ForceDir>
+		</Force>
+		
+		<Force>
+			<ForceId>8</ForceId>
+			<ForceMag>100</ForceMag>
+			<ForceDir>2.35619</ForceDir>
+		</Force>
+
+<Force>
+			<ForceId>10</ForceId>
+			<ForceMag>500</ForceMag>
+			<ForceDir>2.4435</ForceDir>
+		</Force>
+		
+		<Force>
+			<ForceId>11</ForceId>
+			<ForceMag>340</ForceMag>
+			<ForceDir>1.5708</ForceDir>
+		</Force>
+		
+	</Forces>
+	
+	<Elements>
+		
+		<Element>
+			<ElementId>1</ElementId>
+			<LocalNode1>1</LocalNode1>
+			<LocalNode2>2</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+		
+		<Element>
+			<ElementId>2</ElementId>
+			<LocalNode1>2</LocalNode1>
+			<LocalNode2>3</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+		
+		<Element>
+			<ElementId>3</ElementId>
+			<LocalNode1>3</LocalNode1>
+			<LocalNode2>4</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>4</ElementId>
+			<LocalNode1>4</LocalNode1>
+			<LocalNode2>5</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>5</ElementId>
+			<LocalNode1>1</LocalNode1>
+			<LocalNode2>6</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>6</ElementId>
+			<LocalNode1>2</LocalNode1>
+			<LocalNode2>6</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>7</ElementId>
+			<LocalNode1>2</LocalNode1>
+			<LocalNode2>7</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>8</ElementId>
+			<LocalNode1>3</LocalNode1>
+			<LocalNode2>7</LocalNode2>
+			<YoungsModulus>70000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>9</ElementId>
+			<LocalNode1>3</LocalNode1>
+			<LocalNode2>8</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>10</ElementId>
+			<LocalNode1>4</LocalNode1>
+			<LocalNode2>8</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>11</ElementId>
+			<LocalNode1>4</LocalNode1>
+			<LocalNode2>9</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>12</ElementId>
+			<LocalNode1>5</LocalNode1>
+			<LocalNode2>9</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>13</ElementId>
+			<LocalNode1>2</LocalNode1>
+			<LocalNode2>10</LocalNode2>
+			<YoungsModulus>70000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>14</ElementId>
+			<LocalNode1>4</LocalNode1>
+			<LocalNode2>11</LocalNode2>
+			<YoungsModulus>70000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>15</ElementId>
+			<LocalNode1>6</LocalNode1>
+			<LocalNode2>10</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>16</ElementId>
+			<LocalNode1>7</LocalNode1>
+			<LocalNode2>10</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>17</ElementId>
+			<LocalNode1>8</LocalNode1>
+			<LocalNode2>11</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>18</ElementId>
+			<LocalNode1>9</LocalNode1>
+			<LocalNode2>11</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+		<Element>
+			<ElementId>19</ElementId>
+			<LocalNode1>10</LocalNode1>
+			<LocalNode2>11</LocalNode2>
+			<YoungsModulus>200000000000</YoungsModulus>
+			<Area>0.0025</Area>
+		</Element>
+
+	</Elements>
+	
+</Project>
+
+
