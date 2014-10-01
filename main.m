@@ -3,14 +3,19 @@
 
 clear
 eList = 0;
+
+%initialize the map containers used to store node, element, and force
+%objects from specified xml file
 run ('initMaps.m');
 
 gsmSize = nodeMap.Count * 2;
 
+%initialize each element's kEffective (see kEff method in element class)
 for e = 1:elementMap.Count
     elementMap(e) = kEff(elementMap(e));
 end
 
+%script which constructs the global stiffness matrix
 run('GSM.m');
 
 %build global force vector and global displacement vector
@@ -28,9 +33,7 @@ end
 %solve mixed solution
 run('mixedSolutionSolver');
 
-%post process
 %post processing
-
 fprintf('Post-processing:\nID       Stress Magnitude     Stress Direction\n');
 
 for e=1:elementMap.Count

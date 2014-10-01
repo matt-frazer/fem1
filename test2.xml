@@ -116,7 +116,7 @@
 		<Force>
 			<ForceId>11</ForceId>
 			<ForceMag>340</ForceMag>
-			<ForceDir>1.5708</ForceDir>
+			<ForceDir>1.57079633</ForceDir>
 		</Force>
 		
 	</Forces>

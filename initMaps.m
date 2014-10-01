@@ -2,7 +2,9 @@ nodeMap = containers.Map('KeyType', 'int32', 'ValueType', 'any');
 forceMap = containers.Map('KeyType', 'int32', 'ValueType', 'any');
 elementMap = containers.Map('KeyType', 'int32', 'ValueType', 'any');
 
-fileName = 'toast2.xml';
+%the xml file from which to populate the node, element, and force data. To
+%set the full file path, see the "readXML" fcn
+fileName = 'test.xml';
 
 %Node Data
 globalIds = readXML('GlobalId',fileName);

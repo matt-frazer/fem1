@@ -1,6 +1,12 @@
 function [ output ] = readXML( xmlTag, fileName )
     
-    %takes in the full path seperated by commas
+    %takes the full path seperated by commas:
+    %C:\myfile.xml is:
+    %           xmlDoc = xmlread(fullfile('C:', fileName) );
+    %C:\my\dir\path\myfile.xml is     
+    %   xmlDoc = xmlread(fullfile('C:','my','dir','path',fileName) );
+    %with filename being set in initMaps.m
+
     xmlDoc = xmlread(fullfile('C:', fileName) );
 
     xmlTagElement = xmlDoc.getElementsByTagName(xmlTag);

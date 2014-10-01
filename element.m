@@ -1,5 +1,12 @@
 classdef element
    
+    %this class represents an element connecting two nodes
+    %it has material properties such as area and young's modulus
+    %and geometric properties such as length, node1, and node 2, the latter
+    %of which hold the nodes' identifiers in the global map.
+    %properties such as the elements kEffective matrix and stress values 
+    %are populated later. The nodeMap property is currently extraneous and
+    %exists for extensibility.
     properties (Access = public)
        elementId_
        yngMod_ %young's modulus
@@ -14,6 +21,8 @@ classdef element
     end
     
     methods
+        
+        %constructor
         function e = element(eId, node1, node2, nodeMap, yngMod, area)
             e.elementId_ = eId;
             e.node1_ = node1;
@@ -54,10 +63,11 @@ classdef element
                   -a*b    -b^2    a*b     b^2;];
            
            e.kEff_ = ((e.area_ * e.yngMod_)/e.length_).*m;
-           %e.kEff_ = m; 
            eOut = e;
         end
         
+        %returns the local stress vector assuming gDisp and kEff are
+        %appropriately initialized
         function stress = localStresses(e, gDispVect)
             
             dispVect = zeros([4,1]);
@@ -76,6 +86,8 @@ classdef element
             
         end
         
+        %interpret local stress vector and initialize element stress 
+        %properties for more human readable output.
         function eOut = postProcess(e,gDispVect)
            
             stress = localStresses(e, gDispVect);
@@ -93,6 +105,7 @@ classdef element
             
         end
         
+        %display fcn, meant to be used with the table headers in main        
         function disp(e)
             
             fprintf('%d         %f          %s\n', e.elementId_, e.stressMag_, e.stressDir_);
